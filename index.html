@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tom Sephton</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap" rel="stylesheet">    <script src="anime.min.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+    <div class="bannercontainer">
+        <div id="title">    
+            <h1>Tom Sephton</h1>  
+            
+        </div>
+        <img src="images/LIGHTNING.svg" id="logo">
+        <p id="showme">SHOW ME</p>
+        <h2 id="typewriter"></h2>
+        <div class="socials">
+            <img src="images/linked.svg" alt="Linked In hyperlink" class="linkicon">
+        </div>
+    </div>
+
+    <script>
+        anime({
+            targets: '#title',
+            keyframes: [
+            {translateX: 2000},
+            {opacity: 1},
+            {translateX: 0},
+            {translateY: 0}
+            ],
+            duration: 3000,
+            easing: 'easeOutElastic(1, .8)',
+        });
+
+        anime({
+            targets: '#logo',
+            keyframes: [
+            {opacity: 1},
+            ],
+            duration:1000,
+            delay: anime.stagger(500, {start: 2500}) 
+        });
+
+    </script>
+</body>
+</html>
