@@ -32,7 +32,6 @@ h2 {
 }
 
 #title {
-    /* padding-left: 30px; */
     grid-column: 3/7 ;
     grid-row: 3 / 4;
 }
@@ -41,7 +40,7 @@ h2 {
     height: 100vh;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(6, 1fr);
+    grid-template-rows: minmax(6, 1fr) 150px;
 
 }
 
@@ -49,7 +48,6 @@ h2 {
     grid-row: 4 / 5;
     grid-column: 3 / 6;
     min-height: 50px;
-    /* padding-left: 60px; */
     padding-top: 30px;
     height: 100%;
 }
