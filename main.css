@@ -75,32 +75,39 @@ h2 {
 
 @keyframes bokeh {
     from {filter: blur(0px);
-        transform: matrix(1 0 0 0 0 0);
     }
     to {filter: blur(20px);
-        transform: matrix(100 0 0 0 0 0);
     }
+}
+
+@keyframes flicker {
+    from {opacity: 1;}
+    to {opacity: 0.1;}
+}
+
+.flicker {
+    animation: flicker 333ms infinite;
 }
 
 #bulb1 {
     grid-row: 2/3;
     grid-column: 5/6;
     transform: rotate(20deg);
-    animation: bokeh 10s infinite;
+    animation: bokeh 10s infinite; 
 }
 
 #bulb2 {
     grid-row: 4/5;
     grid-column: 6/7;
     transform: rotate(-50deg);
-    animation: bokeh 6s infinite;
+    animation: bokeh 6s infinite; 
 }
 
 #bulb3 {
     grid-row: 2/3;
     grid-column: 3/4;
     transform: rotate(-15deg);
-    animation: bokeh 15s infinite;
+    animation: bokeh 15s infinite; 
 }
 
 #bulb4 {
@@ -113,8 +120,8 @@ h2 {
 #bulb5 {
     grid-row: 3/4;
     grid-column: 2/3;
-    transform: rotate(50deg);
-    animation: bokeh 12s infinite;
+    transform: rotate(80deg);
+    animation: bokeh 12s infinite; 
 }
 
 
@@ -220,7 +227,7 @@ span {
     margin: 70px auto;
     padding: 20px;
     background-color: rgba(66, 66, 66, 0.555);
-    border: 1px solid#146868ba;
+    /* border: 1px solid#146868ba; */
     box-shadow: 0 0 20px 0.5px  #151717c7;
     border-radius: 20px;
     width: 30%;
@@ -316,7 +323,7 @@ span {
         padding-left: 0px;
         }
     #title h1 {
-        font-size: 15vw;
+        font-size: 13vw;
         text-align: center;
     }
 
@@ -324,7 +331,7 @@ span {
         grid-row: 4/5;
         grid-column: 1/7;
         text-align: center;
-        font-size: 6vw;
+        font-size: 4vw;
     }
 
     #showme {
@@ -341,28 +348,49 @@ span {
         justify-self: center;
         padding: 0px;
     }
-    #bulb2 {
-        display: none;
+
+    .bulb {
+        height: 1vh;
+        width: 23vw;
     }
 
-    #bulb3 {
-        grid-column: 2/3;    
+    /* #bulb1 {
+        grid-row: 2/3;
+        grid-column: 4/6;
+        transform: rotate(-85deg);
+    } */
+
+    #bulb2 {
+        grid-row: 2/3;
+        transform: rotate(70deg);
+
     }
+
+    /* #bulb3 {
+        grid-column: 2/3;
+    } */
 
     #bulb4 {
         grid-row: 6/7;
-        grid-column: 5/6;
+        grid-column: 6/7;
         transform: rotate(-25deg);
     }
 
     #bulb5 {
-        display: none;
+        grid-row: 7/8;
+        grid-column: 2/3;
+        transform: rotate(10deg);
     }
     
 }
 
 
 @media only screen and (max-width: 700px) {
+
+   #bulb1 {
+        display: none;
+       }
+    
     #title {
         grid-row: 3/4;
         grid-column: 1/7;
@@ -388,20 +416,11 @@ span {
         grid-column: 1 / 7;
         grid-row: 6 / 7;
     }
-    .bulb {
-        height: 10px;
-        width: 200px;
-    }
+}
 
+@media only screen and (max-height: 500px) {
     #bulb1 {
-        transform: rotate(30deg)
-    }
-
-    #bulb3 {
-        transform: rotate(-40deg)
-    }
-
-    #bulb4 {
         display: none;
     }
+
 }
