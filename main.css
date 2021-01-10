@@ -53,6 +53,7 @@ h2 {
     min-height: 50px;
     padding-top: 30px;
     height: 100%;
+    text-shadow: 2px 2px 50px #9399ff;
 }
 
 .bulb {
