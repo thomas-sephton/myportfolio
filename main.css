@@ -39,6 +39,12 @@ h2 {
     text-shadow: 2px 2px 50px #9399ff;
 }
 
+.centrediv {
+    margin: auto;
+    width: 100%;
+    max-width: 1400px;
+}
+
 .content {
     height: 100vh;
     display: grid;
@@ -63,36 +69,52 @@ h2 {
     border-radius: 30px;
     border-style: solid 1px cyan;
     box-shadow: 0px 0px 50px cyan;
+    filter: blur(0px);
+
+}
+
+@keyframes bokeh {
+    from {filter: blur(0px);
+        transform: matrix(1 0 0 0 0 0);
+    }
+    to {filter: blur(20px);
+        transform: matrix(100 0 0 0 0 0);
+    }
 }
 
 #bulb1 {
     grid-row: 2/3;
     grid-column: 5/6;
     transform: rotate(20deg);
+    animation: bokeh 10s infinite;
 }
 
 #bulb2 {
     grid-row: 4/5;
     grid-column: 6/7;
     transform: rotate(-50deg);
+    animation: bokeh 6s infinite;
 }
 
 #bulb3 {
     grid-row: 2/3;
     grid-column: 3/4;
     transform: rotate(-15deg);
+    animation: bokeh 15s infinite;
 }
 
 #bulb4 {
     grid-row: 6/7;
     grid-column: 3/4;
     transform: rotate(20deg);
+    animation: bokeh 7s infinite;
 }
 
 #bulb5 {
     grid-row: 3/4;
     grid-column: 2/3;
     transform: rotate(50deg);
+    animation: bokeh 12s infinite;
 }
 
 
