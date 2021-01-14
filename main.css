@@ -23,6 +23,54 @@ html {
     overflow: hidden;
 }
 
+.backlight {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    flex-direction: row;
+    
+    position: fixed;
+    
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+}
+
+#backlight1 {
+    width: 10vw;
+    background-color: rgba(0, 255, 255, 0.061);
+    filter:blur(90px);
+    animation: pulse 10s infinite;
+}
+
+#backlight2 {
+    width: 10vw;
+    background-color: rgba(0, 255, 255, 0.061);
+    filter:blur(90px);
+    animation: pulse 8s infinite;
+}
+
+#backlight3 {
+    width: 60vw;
+}
+
+#backlight4 {
+    width: 10vw;
+    background-color: rgba(0, 255, 255, 0.061);
+    filter:blur(90px);
+    opacity: 0.7;
+    animation: pulse 8s infinite;
+}
+
+#backlight5 {
+    width: 10vw;
+    background-color: rgba(0, 255, 255, 0.061);
+    filter:blur(90px);
+    animation: pulse 5s infinite;
+
+}
+
 h1 {
     font-size:100px;
     color: #ffffff;
@@ -70,6 +118,7 @@ h2 {
     border-style: solid 1px cyan;
     box-shadow: 0px 0px 50px cyan;
     filter: blur(0px);
+    animation: pulse 1s infinite;
 
 }
 
@@ -81,12 +130,14 @@ h2 {
 }
 
 @keyframes flicker {
-    from {opacity: 1;}
-    to {opacity: 0.1;}
+    0% {opacity: 1;}
+    50% {opacity: 0.1;}
+    100% {opacity: 1;}
 }
 
-.flicker {
+.flickers {
     animation: flicker 333ms infinite;
+    /* animation-duration: 1s; */
 }
 
 #bulb1 {
@@ -104,38 +155,82 @@ h2 {
 }
 
 #bulb3 {
-    grid-row: 2/3;
-    grid-column: 3/4;
-    transform: rotate(-15deg);
-    animation: bokeh 15s infinite; 
-}
-
-#bulb4 {
     grid-row: 6/7;
     grid-column: 3/4;
     transform: rotate(20deg);
     animation: bokeh 7s infinite;
 }
 
-#bulb5 {
+#bulb4 {
     grid-row: 3/4;
     grid-column: 2/3;
     transform: rotate(80deg);
     animation: bokeh 12s infinite; 
 }
 
+#bulb5 {
+    grid-row: 2/3;
+    grid-column: 3/4;
+    transform: rotate(-15deg);
+    animation: bokeh 15s infinite; 
+}
 
 span {
     border-right: .05em solid;
     -webkit-animation: caret 1s steps(1) infinite;
             animation: caret 1s steps(1) infinite;
 }
-  
+
+/* .flare {
+    grid-area: 5 / 2 / 6 / 3;
+    margin: auto;
+    width: 40px;
+    height: 10px;
+    border-radius: 30px;
+    filter: blur(3px);
+    transform: matrix(10, 0, 0, 1, 0, 0);
+    background-color: rgb(255, 255, 255);
+    box-shadow: cyan 2px 2px 10px;
+
+} */
+
 .socials {
     grid-row: 5 / 6;
     grid-column: 2 / 3;
     margin: auto;
 } 
+.pent-one{
+    animation: strobe 2s infinite;
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+}
+.pent-two {
+    transform: translate(-80px, -40px) rotate(37deg);
+    animation: strobe 2s infinite;
+    animation-delay: 1s;
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+}
+.pent {
+    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+    height:40px;
+    width: 40px;
+    background-color: rgba(4, 143, 143, 0.644);
+    margin:auto;
+    filter: blur(20px);
+    animation: strobe 2s infinite;
+}
+
+@keyframes strobe {
+    0% {background-color: rgba(44, 255, 255, 0.829)}
+    50% {background-color: rgba(0, 255, 243, 50%);}
+    100% {background-color: rgba(44, 255, 255, 0.829);}
+}
+
+.pent:hover {
+    background-color: rgba(195, 0, 255, 0.397);
+    height:48px;
+    width: 48px;
+    transition: 200ms;
+}
 
 .linkicon {
     height: 35px;
@@ -157,45 +252,51 @@ span {
       border-color: transparent;
     }}
 
-#showme {
-    display: inline-block;
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 300;
-    color:cyan;
+#showmeorb {
     grid-row: 5 / 6;
     grid-column: 5 / 6;
-    font-size: .9em;
-    background-color: #ffffff00;
-    border: 3px solid cyan;
-    box-shadow: 0 0 0.5px 0.5px cyan;
     margin: auto;
-    padding: 1em;
     border-radius: 30px;
-    animation: pulse 2s infinite;
+    animation: pulse 4s infinite;
+    color:#282a2bd5;
+    background-color: rgba(0, 255, 255, 0.726);
+    opacity: 0.7;
+    height:70px;
+    width:70px;
+    filter: blur(100px);
 }
 
-#contact {
-    background-color: #1a363f;
-
-}
 @keyframes pulse {
 	0% {
         transform: scale(0.95);
-        box-shadow: 0 0 20px 0.5px cyan;
+        /* box-shadow: 0 0 20px 0.5px cyan; */
 	}
 
 	70% {
         transform: scale(1);
-        box-shadow: 0 0 20px 0.1px cyan;
+        /* box-shadow: 0 0 20px 0.1px cyan; */
 	}
 
 	100% {
         transform: scale(0.95);
-        box-shadow: 0 0 20px 0.5px cyan;
+        /* box-shadow: 0 0 20px 0.5px cyan; */
 	}
 }
 
-.buttonhover:hover {
+/* #showme:hover {
+    color:#282a2b;
+    background-color: rgba(0, 255, 255, 0.726);
+    box-shadow: 0 0 20px 4px cyan;
+    text-shadow: 0 0 3px 5px white;
+    opacity: 1;
+    height:100px;
+    width:100px;
+    filter: blur(100px);
+    border-radius: 100%;
+    transition: 200ms;
+} */
+
+#submit:hover {
     color:#282a2b;
     background-color: rgba(0, 255, 255, 0.726);
     box-shadow: 0 0 20px 4px cyan;
@@ -203,6 +304,7 @@ span {
     opacity: 1;
     transition: 200ms;
 }
+
 
 .overlay {
     position: fixed;
@@ -309,6 +411,21 @@ span {
     padding: 1em;
 }
 
+.blurout {
+    animation: blurout 5s;
+}
+
+@keyframes blurout {
+    from {filter: blur(0px);
+        opacity: 1;
+    }
+    to {filter: blur(20px);
+        opacity: 0;
+    }
+}
+
+
+
 @media screen and (max-width: 700px){
 
     .popup{
@@ -354,11 +471,11 @@ span {
         width: 23vw;
     }
 
-    /* #bulb1 {
+    #bulb1 {
         grid-row: 2/3;
-        grid-column: 4/6;
-        transform: rotate(-85deg);
-    } */
+        grid-column: 2/3;
+        transform: rotate(-40deg);
+    }
 
     #bulb2 {
         grid-row: 2/3;
@@ -387,10 +504,6 @@ span {
 
 @media only screen and (max-width: 700px) {
 
-   #bulb1 {
-        display: none;
-       }
-    
     #title {
         grid-row: 3/4;
         grid-column: 1/7;
