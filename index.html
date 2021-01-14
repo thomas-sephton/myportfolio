@@ -9,59 +9,75 @@
     <script src="main.js"></script>
 </head>
 <body>
-    <div class="centrediv">
-        <div class="content">
+    <div class="backlight">
+        <div id="backlight1"></div>
+        <div id="backlight2"></div>
+        <div id="backlight3"></div>
+        <div id="backlight4"></div>
+        <div id="backlight5"></div>
+    </div>
+        <div class="centrediv">
+            <div class="content">
 
-            <div id="title">    
-                <h1>Tom Sephton</h1>     
-            </div>
-
-            <div id="showme" class="buttonhover">SHOW ME</div>
-
-            <h2 id="typewriter"></h2>
-
-                <div id="bulb1" class="bulb"></div>
-                <div id="bulb2" class="bulb"></div>
-                <div id="bulb3" class="bulb"></div>
-                <div id="bulb4" class="bulb"></div>
-                <div id="bulb5" class="bulb"></div>
-
-            <div class="socials">
-                <a href="https://www.linkedin.com/in/thomas-sephton-0ba072193/" target="_blank"><img src="images/linked.svg" alt="my Linked In Profile" class="linkicon"></a>
-                <a href="#popup1"><img src="images/chat.svg" alt="Contact Me" class="linkicon modal-toggle"></a>
-            </div>
-
-        </div>
-
-        <div id="popup1" class="overlay">
-            <div class="popup">
-                <div class-="popupHeader">
-                    <h2>DON'T BE SHY...</h2>
-                    <a class="close" href="#">&times;</a>
+                <div id="title">    
+                    <h1>Tom Sephton</h1>     
                 </div>
-                <p>drop me a message, I'll be in touch.</p>
-                <div class="popup_content">
-                    <div class="popup_form">
-                        <form action="submit_form.php">
-                            <label for="name">Name</label>
-                            <br>
-                            <input type="text" id="nname" name="name" placeholder="Your name..">
-                            <br>
-                            <label for="email">Email</label>
-                            <br>
-                            <input type="text" id="email" name="email" placeholder="Your email address..">
-                            <br>
-                            <label for="subject">Message</label>
-                            <br>
-                            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-                            <br>
-                            <input type="submit" value="SUBMIT" id="submit" class="buttonhover">
-                        
-                        </form>
+
+                <div id="showmeorb"></div>
+
+                <h2 id="typewriter"></h2>
+
+                    <div id="bulb1" class="bulb" class="flickers"></div>
+                    <div id="bulb2" class="bulb"></div>
+                    <div id="bulb3" class="bulb"></div>
+                    <div id="bulb4" class="bulb"></div>
+                    <div id="bulb5" class="bulb"></div>
+                    <!-- <div id="bulb6" class="bulb"></div>  -->
+                    <!-- <div id="bulb7" class="bulb"></div> -->
+                <div class="flare"></div>
+                <div class="socials">  
+            
+                    <button class="pent-one">
+                        <div class="pent">
+                        </div>
+                    </button> 
+                    <button class="pent-two">
+                        <div class="pent">
+                        </div>
+                    </button> 
+                </div>
+
+            </div>
+
+            <div id="popup1" class="overlay">
+                <div class="popup">
+                    <div class-="popupHeader">
+                        <h2>DON'T BE SHY...</h2>
+                        <a class="close" href="#">&times;</a>
+                    </div>
+                    <p>drop me a message, I'll be in touch.</p>
+                    <div class="popup_content">
+                        <div class="popup_form">
+                            <form action="submit_form.php">
+                                <label for="name">Name</label>
+                                <br>
+                                <input type="text" id="nname" name="name" placeholder="Your name..">
+                                <br>
+                                <label for="email">Email</label>
+                                <br>
+                                <input type="text" id="email" name="email" placeholder="Your email address..">
+                                <br>
+                                <label for="subject">Message</label>
+                                <br>
+                                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+                                <br>
+                                <input type="submit" value="SUBMIT" id="submit">
+                            
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 </body>
 </html>
